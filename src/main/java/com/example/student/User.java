@@ -14,11 +14,19 @@ public class User {
 
     private UUID id=UUID.randomUUID();
 
+    /**
+     * reading values/streams or constants from application.properties
+     * All is done using the @Value("${}") //Annotation
+     */
     @Value( "${names}" )
     private List <String> names;
 
+    /**
+     * *
+     * Field Injections
+     * *
+     */
 
-//    Field injection
     @Autowired
     private Address address;
     @Autowired
@@ -64,12 +72,7 @@ public class User {
 //    0800668539
 //    credit no 138022
 
-    /**
-     * Field Injections
-     * *
-     *
-     *
-      */
+
     public void printDetails(){
 
         System.out.println("\nID:"+id
