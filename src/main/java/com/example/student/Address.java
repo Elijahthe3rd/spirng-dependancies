@@ -34,7 +34,7 @@ public class Address {
         return HNo.get(new Random().nextInt(HNo.size()-1)+1);
     }
 
-    public String getCities() {
+    public String getCity() {
         return cities.get(new  Random().nextInt(cities.size()-1)+1 );
     }
 
@@ -44,5 +44,16 @@ public class Address {
 
     public Integer getZipCode() {
         return zipCode.get( new Random().nextInt(zipCode.size()-1)+1 );
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street=" + getStreet() +
+                ", HNo=" + getHouseNo() +
+                ", cities=" + getCity() +
+                ", provinces=" + getProvince() +
+                ", zipCode=" + getZipCode() +
+                '}';
     }
 }

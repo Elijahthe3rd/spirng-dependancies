@@ -88,8 +88,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + names.get( 0 ) + '\'' +
-                ", address=" + address +
-                ", salary=" + salary +
+                ", address=" + address.toString() +
+                ", salary=" + salary.getAmount() +
                 '}';
     }
 }

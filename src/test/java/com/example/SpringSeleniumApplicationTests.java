@@ -3,6 +3,7 @@ package com.example;
 import com.example.student.Address;
 import com.example.student.Salary;
 import com.example.student.User;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,8 +23,10 @@ class SpringSeleniumApplicationTests {
 	void contextLoads() {
 		System.out.println(frts);
 		user.printDetails();
-		user.printDetails();
-		user.printDetails();
+		System.out.println();
+
+		Assertions.assertNotNull(user);
+		System.out.println(user);
 	}
 
 }
